@@ -7,9 +7,75 @@
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header class="top-bar"><h1 class="title">MVC Laboratory</h1></header>
     <main>
-      <button type="button" id="btn">Haz clic</button>
+      <div id="navigator">
+        <p class="text-progres" id="step-progress" aria-live="polite">Sección 1 de 3</p>
+        <div class="text-title">
+          <h1 class="rgt-title" id="registration-title">Completa tu información</h1>
+          <p class="text-expl">Avanza paso a paso,Podras revisar tus respuestas al finalizar</p>
+        </div>
+        <div class="steps">
+          <div class="step active" id="step1">
+            <span>Sección 1</span>
+          </div>
+          <div class="step" id="step2">
+            <span>Sección 2</span>
+          </div>
+          <div class="step" id="step3">
+            <span>Sección 3</span>
+          </div>
+        </div>
+        <div class="groups">
+          <div class="groups-track">
+            <section
+              class="navigable-group data-user"
+              id="section-one"
+              aria-labelledby="section-one-title"
+            >
+              <div class="form-group">
+                <input id="inputName" class="input-user " type="text" placeholder="Nombre" />
+                <label class="error"> Este campo es obligatorio</label>
+                <span class="error-icon ">*</span>
+              </div>
+              <div class="form-group">
+                <input id="inputLastName" class="input-user" type="text" placeholder="Apellidos" />
+                <label class="error">Este campo es obligatorio</label>
+                <span class="error-icon">*</span>
+              </div>
+              <div class="form-group">
+                <input id="inputEmail" class="input-user" type="email" placeholder="Email" />
+                <label class="error">Este campo es obligatorio</label>
+                <span class="error-icon">*</span>
+              </div>
+              <div class="form-group">
+                <input id="inputPhone" class="input-user" type="text" placeholder="Telefono" />
+                <label class="error">Formato invalido</label>
+              </div>
+            </section>
+            <section
+              class="navigable-group"
+              id="section-two"
+              aria-labelledby="section-two-title"
+              inert
+            >
+              <h2 id="section-two-title" tabindex="-1">Participación</h2>
+            </section>
+            <section
+              class="navigable-group"
+              id="section-three"
+              aria-labelledby="section-three-title"
+              inert
+            >
+              <h2 id="section-three-title" tabindex="-1">Experiencia</h2>
+            </section>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="button-form" type="button" id="navLeft" disabled>Retroceder</button>
+          <button class="button-form btn-azul" type="button" id="navRight">Continuar</button>
+        </div>
+      </div>
     </main>
     <script type="module" src="./src/js/main.js"></script>
   </body>

@@ -1,5 +1,6 @@
-const btn = document.querySelector('#btn');
+import { initializeNavigation } from './navigation.js';
 
-btn.addEventListener('click', () => {
-  btn.textContent = '¡Gracias!';
-});
+initializeNavigation();
+
+
+
